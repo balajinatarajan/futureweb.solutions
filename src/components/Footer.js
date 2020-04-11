@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { rhythm } from '../utils/typography';
+import { rhythm } from "../utils/typography";
 
 class Footer extends React.Component {
   render() {
@@ -8,10 +8,10 @@ class Footer extends React.Component {
       <footer
         style={{
           marginTop: rhythm(2.5),
-          paddingTop: rhythm(1),
+          paddingTop: rhythm(1)
         }}
       >
-        <div style={{ float: 'right' }}>
+        <div style={{ float: "right" }}>
           <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
             rss
           </a>
@@ -22,16 +22,16 @@ class Footer extends React.Component {
           rel="noopener noreferrer"
         >
           twitter
-        </a>{' '}
-        &bull;{' '}
+        </a>{" "}
+        &bull;{" "}
         <a
           href="https://github.com/balajinatarajan"
           target="_blank"
           rel="noopener noreferrer"
         >
           github
-        </a>{' '}
-        &bull;{' '}
+        </a>{" "}
+        &bull;{" "}
         <a
           href="https://github.com/balajinatarajan"
           target="_blank"

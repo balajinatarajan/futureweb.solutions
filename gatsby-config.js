@@ -1,22 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: 'FutureWeb Solutions',
-    author: 'Bala Natarajan',
+    title: "FutureWeb Solutions",
+    author: "Bala Natarajan",
     description:
-      'Personal blog by Bala Natarajan. I explain with boxes and arrows.',
-    siteUrl: 'https://futureweb.solutions',
+      "Personal blog by Bala Natarajan. I explain with boxes and arrows.",
+    siteUrl: "https://futureweb.solutions",
     social: {
-      twitter: '@balajee',
-    },
+      twitter: "@balajee"
+    }
   },
-  pathPrefix: '/',
+  pathPrefix: "/",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -25,40 +25,40 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
-          'gatsby-remark-autolink-headers',
+          "gatsby-remark-autolink-headers",
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: "gatsby-remark-prismjs",
             options: {
-              inlineCodeMarker: '÷',
-            },
+              inlineCodeMarker: "÷"
+            }
           },
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
           {
-            resolve: 'gatsby-remark-external-links',
+            resolve: "gatsby-remark-external-links",
             options: {
-              target: '_blank',
-            },
-          },
-        ],
-      },
+              target: "_blank"
+            }
+          }
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-130227707-1`,
-      },
+        trackingId: `UA-130227707-1`
+      }
     },
     {
       resolve: `gatsby-plugin-feed`,
@@ -98,7 +98,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': html + postText }],
+                  custom_elements: [{ "content:encoded": html + postText }]
                 });
               });
             },
@@ -126,16 +126,16 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml',
-            title: "Dan Abramov's Overreacted Blog RSS Feed",
-          },
-        ],
-      },
+            output: "/rss.xml",
+            title: "Dan Abramov's Overreacted Blog RSS Feed"
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-ebook`,
       options: {
-        filename: 'overreacted-ebook.epub',
+        filename: "overreacted-ebook.epub",
         query: `
           {
             site {
@@ -160,8 +160,8 @@ module.exports = {
                 }
               }
             }
-          }`,
-      },
+          }`
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -173,23 +173,23 @@ module.exports = {
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
         icon: `src/assets/icon.png`,
-        theme_color_in_head: false,
-      },
+        theme_color_in_head: false
+      }
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
+        pathToConfigModule: "src/utils/typography"
+      }
     },
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-      },
+        langKeyDefault: "en",
+        useLangKeyLayout: false
+      }
     },
-    `gatsby-plugin-catch-links`,
-  ],
+    `gatsby-plugin-catch-links`
+  ]
 };
