@@ -57,7 +57,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-130227707-1`
+        trackingId: `UA-163409917-1`
       }
     },
     {
@@ -81,12 +81,11 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at overreacted.io. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at futureweb.solutions. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
 
                 let html = edge.node.html;
-                // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
@@ -127,7 +126,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Dan Abramov's Overreacted Blog RSS Feed"
+            title: "Bala Natarajan's Futureweb Solutions Blog RSS Feed"
           }
         ]
       }
@@ -135,7 +134,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-ebook`,
       options: {
-        filename: "overreacted-ebook.epub",
+        filename: "futurewebsolutions-ebook.epub",
         query: `
           {
             site {
